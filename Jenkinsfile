@@ -3,7 +3,7 @@ node {
         git 'https://github.com/bobo15850/homework.git'
     }
     stage('QA') {
-        sh 'sonar-scanner'
+        sh 'sonar-runner'
     }
     stage('build') {
         def mvnHome = tool 'M3'
