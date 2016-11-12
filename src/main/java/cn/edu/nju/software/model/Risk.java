@@ -1,6 +1,7 @@
 package cn.edu.nju.software.model;
 
 import java.util.Date;
+import java.util.UUID;
 
 import cn.edu.nju.software.consts.RiskImpact;
 import cn.edu.nju.software.consts.RiskPossibility;
@@ -13,7 +14,7 @@ import cn.edu.nju.software.consts.RiskPossibility;
  */
 public class Risk {
 	/* uuid */
-	private String id;
+	private String id = UUID.randomUUID().toString();
 	/* 内容 */
 	private String content;
 	/* 可能性 */
@@ -23,13 +24,13 @@ public class Risk {
 	/* 触发器 */
 	private String tigger;
 	/* 提交者 */
-	private User submiter;
+	private String submiterId;
 	/* 跟踪者 */
-	private User tracker;
+	private String trackerId;
 	/* 创建时间 */
-	private Date createGmt;
+	private Date createGmt = new Date();
 	/* 修改时间 */
-	private Date modifyGmt;
+	private Date modifyGmt = new Date();
 
 	public String getId() {
 		return id;
@@ -71,20 +72,20 @@ public class Risk {
 		this.tigger = tigger;
 	}
 
-	public User getSubmiter() {
-		return submiter;
+	public String getSubmiterId() {
+		return submiterId;
 	}
 
-	public void setSubmiter(User submiter) {
-		this.submiter = submiter;
+	public void setSubmiterId(String submiterId) {
+		this.submiterId = submiterId;
 	}
 
-	public User getTracker() {
-		return tracker;
+	public String getTrackerId() {
+		return trackerId;
 	}
 
-	public void setTracker(User tracker) {
-		this.tracker = tracker;
+	public void setTrackerId(String trackerId) {
+		this.trackerId = trackerId;
 	}
 
 	public Date getCreateGmt() {
@@ -106,8 +107,8 @@ public class Risk {
 	@Override
 	public String toString() {
 		return "Risk [id=" + id + ", content=" + content + ", posibility=" + posibility + ", impact=" + impact
-				+ ", tigger=" + tigger + ", submiter=" + submiter + ", tracker=" + tracker + ", createGmt=" + createGmt
-				+ ", modifyGmt=" + modifyGmt + "]";
+				+ ", tigger=" + tigger + ", submiterId=" + submiterId + ", trackerId=" + trackerId + ", createGmt="
+				+ createGmt + ", modifyGmt=" + modifyGmt + "]";
 	}
 
 }

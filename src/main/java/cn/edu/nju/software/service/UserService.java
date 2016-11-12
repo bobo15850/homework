@@ -1,6 +1,7 @@
 package cn.edu.nju.software.service;
 
 import cn.edu.nju.software.consts.ResultDO;
+import cn.edu.nju.software.model.User;
 
 public interface UserService {
 	/**
@@ -8,10 +9,9 @@ public interface UserService {
 	 * 
 	 * @param nick
 	 * @param password
-	 * @param role
 	 * @return
 	 */
-	ResultDO<Boolean> register(String nick, String password, int role);
+	ResultDO<Boolean> register(String nick, String password);
 
 	/**
 	 * 登陆
@@ -20,6 +20,6 @@ public interface UserService {
 	 * @param password
 	 * @return
 	 */
-	ResultDO<Boolean> login(String nick, String password);
+	ResultDO<User> login(String nick, String password);
 
 }

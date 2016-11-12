@@ -13,4 +13,10 @@
 
 	<!-- 加载包中的controller 注解扫描包 -->
 	<context:component-scan base-package="cn.edu.nju.software.service" />
+
+	<bean id="userService" class="cn.edu.nju.software.service.impl.UserServiceImpl" />
+	<bean id="riskService" class="cn.edu.nju.software.service.impl.RiskServiceImpl" />
+
+	<bean id="userDao" class="cn.edu.nju.software.dao.impl.UserDaoImpl" />
+	<bean id="riskDao" class="cn.edu.nju.software.dao.impl.RiskDaoImpl" />
 </beans>

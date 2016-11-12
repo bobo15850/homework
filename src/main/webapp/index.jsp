@@ -8,8 +8,8 @@
 	<h3>
 		<a href="<%=basePath%>/login.jsp">登录</a>
 	</h3>
-	<h4>
+	<h3>
 		<a href="<%=basePath%>/register.jsp">注册</a>
-	</h4>
+	</h3>
 </body>
 </html>

@@ -1,6 +1,7 @@
 package cn.edu.nju.software.model;
 
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * 风险状态跟踪
@@ -10,15 +11,15 @@ import java.util.Date;
  */
 public class RiskTrack {
 	/* 编号 */
-	private String id;
+	private String id = UUID.randomUUID().toString();
 	/* 风险编号 */
 	private String riskId;
 	/* 描述 */
 	private String desc;
 	/* 创建时间 */
-	private Date createGmt;
+	private Date createGmt = new Date();
 	/* 修改时间 */
-	private Date modifyGmt;
+	private Date modifyGmt = new Date();
 
 	public String getId() {
 		return id;
@@ -58,6 +59,12 @@ public class RiskTrack {
 
 	public void setModifyGmt(Date modifyGmt) {
 		this.modifyGmt = modifyGmt;
+	}
+
+	@Override
+	public String toString() {
+		return "RiskTrack [id=" + id + ", riskId=" + riskId + ", desc=" + desc + ", createGmt=" + createGmt
+				+ ", modifyGmt=" + modifyGmt + "]";
 	}
 
 }
