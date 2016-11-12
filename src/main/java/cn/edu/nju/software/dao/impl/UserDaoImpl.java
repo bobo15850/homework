@@ -1,5 +1,7 @@
 package cn.edu.nju.software.dao.impl;
 
-public class UserDaoImpl {
+import cn.edu.nju.software.dao.UserDao;
+
+public class UserDaoImpl implements UserDao{
 
 }

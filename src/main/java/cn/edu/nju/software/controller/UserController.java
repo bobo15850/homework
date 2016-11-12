@@ -1,17 +1,21 @@
 package cn.edu.nju.software.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("user")
 public class UserController {
 
-	@RequestMapping("/test")
-	public String test(HttpServletRequest request) {
-		request.setAttribute("param", "test");
-		return "test";
+	@RequestMapping(value = "login", method = { RequestMethod.POST })
+	public String login() {
+		return "index";
 	}
+
+	@RequestMapping(value = "register", method = { RequestMethod.POST })
+	public String register() {
+		return "login";
+	}
+
 }
