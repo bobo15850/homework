@@ -7,7 +7,7 @@ package cn.edu.nju.software.consts;
  *
  */
 public enum Role {
-	common(0, "普通用户"), admin(1, "管理员");
+	COMMON(0, "普通用户"), ADMIN(1, "管理员");
 
 	private Role(int value, String desc) {
 		this.value = value;
@@ -26,11 +26,11 @@ public enum Role {
 	}
 
 	public Role retrieveRole(int value) {
-		if (common.getValue() == value) {
-			return common;
+		if (COMMON.getValue() == value) {
+			return COMMON;
 		}
-		else if (admin.getValue() == value) {
-			return admin;
+		else if (ADMIN.getValue() == value) {
+			return ADMIN;
 		}
 		throw new IllegalArgumentException("no such value of role,value = " + value);
 	}

@@ -7,7 +7,7 @@ package cn.edu.nju.software.consts;
  *
  */
 public enum RiskImpact {
-	low(0, "低"), mid(1, "中"), high(2, "高");
+	LOW(0, "低"), MID(1, "中"), HIGH(2, "高");
 
 	private final int value;
 	private final String desc;
