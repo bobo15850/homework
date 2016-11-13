@@ -13,7 +13,7 @@
 <html>
 <body style="text-align: center;">
 	<h4>
-		<a href="<%=basePath%>/user/toHome.action">返回</a>
+		<a href="<%=basePath%>/user/toHome.action">返回主页</a>
 	</h4>
 	<h4>
 		风险内容:<%=risk.getContent()%>
