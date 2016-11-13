@@ -18,4 +18,11 @@ public interface UserDao {
 	 * @return
 	 */
 	User getUserByNick(String nick);
+	
+	/**
+	 * 同过编号获取用户
+	 * @param UserId
+	 * @return
+	 */
+	User getUserById(String UserId);
 }

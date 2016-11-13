@@ -3,9 +3,6 @@ package cn.edu.nju.software.model;
 import java.util.Date;
 import java.util.UUID;
 
-import cn.edu.nju.software.consts.RiskImpact;
-import cn.edu.nju.software.consts.RiskPossibility;
-
 /**
  * 风险条目
  * 
@@ -18,15 +15,15 @@ public class Risk {
 	/* 内容 */
 	private String content;
 	/* 可能性 */
-	private RiskPossibility posibility;
+	private Integer posibility;
 	/* 影响 */
-	private RiskImpact impact;
+	private Integer impact;
 	/* 触发器 */
 	private String tigger;
 	/* 提交者 */
 	private String submiterId;
 	/* 跟踪者 */
-	private String trackerId;
+	private String tracker;
 	/* 创建时间 */
 	private Date createGmt = new Date();
 	/* 修改时间 */
@@ -48,19 +45,19 @@ public class Risk {
 		this.content = content;
 	}
 
-	public RiskPossibility getPosibility() {
+	public Integer getPosibility() {
 		return posibility;
 	}
 
-	public void setPosibility(RiskPossibility posibility) {
+	public void setPosibility(Integer posibility) {
 		this.posibility = posibility;
 	}
 
-	public RiskImpact getImpact() {
+	public Integer getImpact() {
 		return impact;
 	}
 
-	public void setImpact(RiskImpact impact) {
+	public void setImpact(Integer impact) {
 		this.impact = impact;
 	}
 
@@ -80,12 +77,12 @@ public class Risk {
 		this.submiterId = submiterId;
 	}
 
-	public String getTrackerId() {
-		return trackerId;
+	public String getTracker() {
+		return tracker;
 	}
 
-	public void setTrackerId(String trackerId) {
-		this.trackerId = trackerId;
+	public void setTracker(String tracker) {
+		this.tracker = tracker;
 	}
 
 	public Date getCreateGmt() {
@@ -107,7 +104,7 @@ public class Risk {
 	@Override
 	public String toString() {
 		return "Risk [id=" + id + ", content=" + content + ", posibility=" + posibility + ", impact=" + impact
-				+ ", tigger=" + tigger + ", submiterId=" + submiterId + ", trackerId=" + trackerId + ", createGmt="
+				+ ", tigger=" + tigger + ", submiterId=" + submiterId + ", tracker=" + tracker + ", createGmt="
 				+ createGmt + ", modifyGmt=" + modifyGmt + "]";
 	}
 

@@ -22,4 +22,12 @@ public interface UserService {
 	 */
 	ResultDO<User> login(String nick, String password);
 
+	/**
+	 * 根据id获取用户
+	 * 
+	 * @param userId
+	 * @return
+	 */
+	ResultDO<User> getUserById(String userId);
+
 }

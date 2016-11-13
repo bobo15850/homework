@@ -24,5 +24,18 @@ public enum RiskPossibility {
 	public String getDesc() {
 		return desc;
 	}
+	
+	public static RiskPossibility retrieveRiskPossibility(int value){
+		if(value==0){
+			return LOW;
+		}
+		if(value == 1){
+			return MID;
+		}
+		if(value == 2){
+			return HIGH;
+		}
+		return LOW;
+	}
 
 }

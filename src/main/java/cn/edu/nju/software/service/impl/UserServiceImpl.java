@@ -44,4 +44,12 @@ public class UserServiceImpl implements UserService {
 		return resultDO;
 	}
 
+	@Override
+	public ResultDO<User> getUserById(String userId) {
+		ResultDO<User> resultDO = new ResultDO<>();
+		resultDO.setSuccess(true);
+		resultDO.setModel(userDao.getUserById(userId));
+		return resultDO;
+	}
+
 }

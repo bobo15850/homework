@@ -25,4 +25,16 @@ public enum RiskImpact {
 		return desc;
 	}
 
+	public static RiskImpact retrieveRiskImpact(int value) {
+		if (value == 0) {
+			return LOW;
+		}
+		if (value == 1) {
+			return MID;
+		}
+		if (value == 2) {
+			return HIGH;
+		}
+		return LOW;
+	}
 }
