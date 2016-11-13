@@ -24,13 +24,6 @@ public class RiskDaoImpl implements RiskDao {
 				risks.add(DB.riskTable.get(id));
 			}
 		}
-		risks.sort(new Comparator<Risk>() {
-			@Override
-			public int compare(Risk o1, Risk o2) {
-				return o2.getCreateGmt().compareTo(o1.getCreateGmt());
-			}
-
-		});
 		return risks;
 	}
 
@@ -52,13 +45,6 @@ public class RiskDaoImpl implements RiskDao {
 				tracks.add(DB.trackTable.get(id));
 			}
 		}
-		tracks.sort(new Comparator<RiskTrack>() {
-
-			@Override
-			public int compare(RiskTrack o1, RiskTrack o2) {
-				return o2.getCreateGmt().compareTo(o1.getCreateGmt());
-			}
-		});
 		return tracks;
 	}
 }
