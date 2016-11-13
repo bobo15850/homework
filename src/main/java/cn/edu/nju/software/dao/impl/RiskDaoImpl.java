@@ -1,7 +1,6 @@
 package cn.edu.nju.software.dao.impl;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import cn.edu.nju.software.dao.RiskDao;
